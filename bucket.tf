@@ -21,7 +21,7 @@ resource "aws_s3_bucket_policy" "s3bucket-policy" {
         Statement = [
             {
                 Sid       = "EnforceTls"
-                Effect    = "Allow"
+                Effect    = "Deny"
                 Principal = "*"
                 Action    = "s3:*"
                 Resource = [
@@ -36,7 +36,7 @@ resource "aws_s3_bucket_policy" "s3bucket-policy" {
             },
             {
                 Sid       = "EnforceProtoVer"
-                Effect    = "Allow"
+                Effect    = "Deny"
                 Principal = "*"
                 Action    = "s3:*"
                 Resource = [
